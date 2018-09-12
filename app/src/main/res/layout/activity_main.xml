@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="169dp"
+        android:layout_height="71dp"
+        android:text="Register"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:textColor="#585858"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email"
+        android:textColor="#585858"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textColor="#585858"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Retype Password"
+        android:textColor="#585858"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="482dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

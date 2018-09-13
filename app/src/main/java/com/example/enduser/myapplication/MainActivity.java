@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Login.class);
+                Intent startIntent = new Intent(getApplicationContext(), HomePage3.class);
                 startActivity(startIntent);
 
             }

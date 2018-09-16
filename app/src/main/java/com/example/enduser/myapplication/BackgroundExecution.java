@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class BackgroundExecution extends AsyncTask<String,Void,String> {
+public class   BackgroundExecution extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
     BackgroundExecution(Context ctx) {

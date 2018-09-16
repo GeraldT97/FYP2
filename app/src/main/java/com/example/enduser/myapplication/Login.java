@@ -17,28 +17,37 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        UsernameEt = (EditText)findViewById(R.id.username);
-        PasswordEt = (EditText)findViewById(R.id.password);
-    }
+        UsernameEt = (EditText) findViewById(R.id.username);
+        PasswordEt = (EditText) findViewById(R.id.password);
 
-    public void OnLogin(View view) {
-        String username = UsernameEt.getText().toString();
-        String password = PasswordEt.getText().toString();
-        String type = "login";
-        BackgroundExecution backgroundWorker = new BackgroundExecution(this);
-        backgroundWorker.execute(type, username, password);
-    }
 
-    if
-    Button button3 = (Button) findViewById(R.id.button);
-        button3.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent startIntent = new Intent(getApplicationContext(), checkCarStatus.class);
-            startActivity(startIntent);
+        public void OnLogin (View view){
+            String username = UsernameEt.getText().toString();
+            String password = PasswordEt.getText().toString();
+            String type = "login";
+            BackgroundExecution backgroundWorker = new BackgroundExecution(this);
+            backgroundWorker.execute(type, username, password);
         }
-    });
 
 
+        Button button3 = (Button) findViewById(R.id.button);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), checkCarStatus.class);
+                startActivity(startIntent);
+            }
+        });
+
+        Button signup = (Button) findViewById(R.id.signup);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(startIntent);
+            }
+        });
+
+    }
 
 }

@@ -1,42 +1,44 @@
 package com.example.enduser.myapplication;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class Login extends Activity {
 
-    private EditText Username,Password;
-
+public class Login extends AppCompatActivity {
+    EditText UsernameEt, PasswordEt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Username = findViewById(R.id.username);
-        Password = findViewById(R.id.password);
-
-
-
-
-       /* Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Login.class);
-                startActivity(startIntent);
-
-
-            }*/
+        UsernameEt = (EditText)findViewById(R.id.username);
+        PasswordEt = (EditText)findViewById(R.id.password);
     }
 
-            public void OnLogin(View view) {
-                String userName = Username.getText().toString();
-                String passWord = Password.getText().toString();
-                String type = "login";
-                BackgroundExecution backgroundExecution = new BackgroundExecution(this);
-                backgroundExecution.execute(type, userName, passWord);
-            }
+    public void OnLogin(View view) {
+        String username = UsernameEt.getText().toString();
+        String password = PasswordEt.getText().toString();
+        String type = "login";
+        BackgroundExecution backgroundWorker = new BackgroundExecution(this);
+        backgroundWorker.execute(type, username, password);
+    }
+
+    if
+    Button button3 = (Button) findViewById(R.id.button);
+        button3.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent startIntent = new Intent(getApplicationContext(), checkCarStatus.class);
+            startActivity(startIntent);
         }
+    });
+
+
+
+}

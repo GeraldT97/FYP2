@@ -8,19 +8,23 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button confirmBtn = (Button) findViewById(R.id.confirmBtn);
+
+        Button confirmBtn = findViewById(R.id.confirmBtn);
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), HomePage3.class);
+                Intent startIntent = new Intent(getApplicationContext(), Login.class);
                 startActivity(startIntent);
 
             }
         });
     }
+
+
 }

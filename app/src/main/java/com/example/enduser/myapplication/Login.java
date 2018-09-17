@@ -19,6 +19,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         UsernameEt = (EditText) findViewById(R.id.username);
         PasswordEt = (EditText) findViewById(R.id.password);
+    }
 
 
         public void OnLogin (View view){
@@ -28,26 +29,13 @@ public class Login extends AppCompatActivity {
             BackgroundExecution backgroundWorker = new BackgroundExecution(this);
             backgroundWorker.execute(type, username, password);
         }
+         public void OpenReg(View view){
+        Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(startIntent);
+         }
 
 
-        Button button3 = (Button) findViewById(R.id.button);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), checkCarStatus.class);
-                startActivity(startIntent);
-            }
-        });
+        }
 
-        Button signup = (Button) findViewById(R.id.signup);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(startIntent);
-            }
-        });
 
-    }
 
-}
